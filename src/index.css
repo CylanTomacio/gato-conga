@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-fade-in: fade-in 3s ease-in;
+
+  @keyframes fade-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+}
