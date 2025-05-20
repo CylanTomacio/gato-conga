@@ -14,17 +14,23 @@ export const CatConga = () => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: bgColor,
+        transition: "background-color 0.7s ease-in",
+      }}
+      className="w-full h-full p-8"
+    >
       <picture
         style={{
           backgroundColor: bgColor,
           transition: "background-color 0.5s ease",
         }}
-        className="w-full h-full animate-fade-in flex justify-center items-center"
+        className="w-full h-full animate-fade-in flex justify-center items-center rounded-2xl"
       >
         <source srcSet={gatoCongaAnimation} type="image/apng" />
-        <img width={480} src={gatoCongaAnimation} alt="" />
+        <img src={gatoCongaAnimation} alt="" />
       </picture>
-    </>
+    </div>
   );
 };
